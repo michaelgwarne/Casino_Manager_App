@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Casino Manager</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="out_of_service">Out of Service:</string>
+    <string name="alerts">Alerts:</string>
+    <string name="online">Online:</string>
+    <string-array name="status">
+        <item>Online</item>
+        <item>Out of Service</item>
+        <item>Alerts</item>
+    </string-array>
+</resources>

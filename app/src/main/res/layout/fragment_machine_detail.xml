@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.michaelwarne.casinomanager.MachineDetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/online"
+        android:id="@+id/online"
+        android:layout_marginStart="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/online_text"
+
+        android:layout_marginStart="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/online" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts"
+        android:id="@+id/alerts"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/online_text"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/alerts_text"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/alerts"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/out_of_service"
+        android:id="@+id/oos"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/alerts_text"
+        android:layout_marginStart="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/oos_text"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/oos"
+        android:layout_marginStart="15dp" />
+
+</RelativeLayout>
