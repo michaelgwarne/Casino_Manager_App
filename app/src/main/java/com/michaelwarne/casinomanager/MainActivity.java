@@ -21,15 +21,15 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 101; i < 115; i ++){
             s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Online"));
+            Machine.machineList.add(new Machine(s ,"Online","s", "m"));
         }
         for(int i = 115; i < 200; i ++){
             s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Alerts"));
+            Machine.machineList.add(new Machine(s ,"Alerts","s", "m"));
         }
         for(int i = 130; i < 145; i ++){
             s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Out of Service"));
+            Machine.machineList.add(new Machine(s ,"Out of Service","s", "m"));
         }
 
 

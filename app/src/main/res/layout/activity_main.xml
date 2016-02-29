@@ -8,12 +8,12 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:baselineAligned="false"
     android:orientation="horizontal"
-    android:layout_weight="2">
+    >
 <LinearLayout
-    android:layout_width="match_parent"
+    android:layout_width="0dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_weight="2">
+    android:layout_weight="1">
 
     <Spinner
         android:layout_width="wrap_content"
@@ -31,14 +31,18 @@
 
     </LinearLayout>
 
-
-
-    <fragment
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        class="com.michaelwarne.casinomanager.MachineDetailFragment"
-        android:id="@+id/detail_fragment"
-        android:layout_weight="1"/>
+        android:orientation="vertical"
+        android:layout_weight="2">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fragment_container2"
+        >
+        </FrameLayout>
 
+    </LinearLayout>
 
 </LinearLayout>

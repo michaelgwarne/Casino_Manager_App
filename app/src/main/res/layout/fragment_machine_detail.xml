@@ -58,4 +58,53 @@
         android:layout_toEndOf="@+id/oos"
         android:layout_marginStart="15dp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/machine_name_text"
+        android:id="@+id/mc_name_text"
+        android:layout_marginTop="57dp"
+        android:layout_below="@+id/online_text"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/machine_type_text"
+        android:id="@+id/textView"
+        android:layout_below="@+id/mc_name_text"
+        android:layout_toEndOf="@+id/online" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/machine_make_text"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/machine_name"
+        android:layout_above="@+id/textView"
+        android:layout_toEndOf="@+id/mc_name_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/machine_type"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toEndOf="@+id/mc_name_text" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/machine_make"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toEndOf="@+id/mc_name_text" />
+
 </RelativeLayout>

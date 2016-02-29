@@ -6,6 +6,9 @@
     <string name="out_of_service">Out of Service:</string>
     <string name="alerts">Alerts:</string>
     <string name="online">Online:</string>
+    <string name="machine_name_text">Machine Name:</string>
+    <string name="machine_type_text">Machine Type:</string>
+    <string name="machine_make_text">Make:</string>
     <string-array name="status">
         <item>Online</item>
         <item>Out of Service</item>

@@ -10,12 +10,31 @@ public class Machine {
 
     private String machineId;
     private String machineStatus;
+    private String machineType;
+    private String machineMake;
     public static ArrayList<Machine> machineList = new ArrayList<>();
 
-    public Machine(String id, String status){
+    public Machine(String id, String status, String type, String make){
         this.machineId = id;
         this.machineStatus = status;
+        this.machineType = type;
+        this.machineMake = make;
+    }
 
+    public String getMachineMake() {
+        return machineMake;
+    }
+
+    public void setMachineMake(String machineMake) {
+        this.machineMake = machineMake;
+    }
+
+    public String getMachineType() {
+        return machineType;
+    }
+
+    public void setMachineType(String machineType) {
+        this.machineType = machineType;
     }
 
     public String getMachineId() {
