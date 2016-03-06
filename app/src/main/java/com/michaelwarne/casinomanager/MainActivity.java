@@ -4,15 +4,23 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
     Spinner spinner;
 
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fragmentManager = getFragmentManager();
+        if(fragmentManager.getBackStackEntryCount() > 1) {
+            fragmentManager.popBackStack();
+        }
+            else{
+                finish();
+            }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,37 +40,21 @@ public class MainActivity extends AppCompatActivity {
             Machine.machineList.add(new Machine(s ,"Out of Service","s", "m"));
         }
 
+        Staff.staffList.add(new Staff("Jessica", "Björnstad","Peon", false));
+        Staff.staffList.add(new Staff("Poopy", "Poophead","Manager", false));
 
-
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        AlertListFragment machineListFragment = new AlertListFragment();
+        OosListFragment oosListFragment = new OosListFragment();
+        StaffListFragment staffListFragment = new StaffListFragment();
+        fragmentTransaction.replace(R.id.fragment_container_out_of_service, oosListFragment);
+        fragmentTransaction.replace(R.id.fragment_container_alerts, machineListFragment);
+        fragmentTransaction.replace(R.id.fragment_container2, staffListFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
         setContentView(R.layout.activity_main);
-        spinner = (Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.status,
-                android.R.layout.simple_dropdown_item_1line);
-        spinner.setAdapter(adapter);
 
-
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-               String s = parent.getItemAtPosition(position).toString();
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                Bundle bun = new Bundle();
-                bun.putString("status", s);
-                MachineListFragment frag0 =  new MachineListFragment();
-                frag0.setArguments(bun);
-                fragmentTransaction.replace(R.id.fragment_container, frag0);
-                fragmentTransaction.commit();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                MachineListFragment frag0 =  new MachineListFragment();
-                fragmentTransaction.replace(R.id.fragment_container, frag0);
-            }
-        });
 
     }
 }

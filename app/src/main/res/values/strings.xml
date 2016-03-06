@@ -9,6 +9,18 @@
     <string name="machine_name_text">Machine Name:</string>
     <string name="machine_type_text">Machine Type:</string>
     <string name="machine_make_text">Make:</string>
+    <string name="paper_error">Paper Out</string>
+    <string name="refill">Refill Paper</string>
+    <string name="yes_button">Y</string>
+    <string name="no_button">N</string>
+    <string name="question_button">\?</string>
+    <string name="reset_printer">Reset Printer</string>
+    <string name="fixed">Fixed?</string>
+    <string name="restart">Restart Machine</string>
+    <string name="check_paper">Check Paper</string>
+    <string name="alerts_text">Alerts</string>
+    <string name="out_of_service_text">Out of Service</string>
+    <string name="floor_staff">Floor Staff</string>
     <string-array name="status">
         <item>Online</item>
         <item>Out of Service</item>

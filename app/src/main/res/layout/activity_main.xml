@@ -15,28 +15,46 @@
     android:orientation="vertical"
     android:layout_weight="1">
 
-    <Spinner
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-       />
+        android:text="@string/alerts_text"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/fragment_container"
+        android:layout_height="275dp"
+        android:id="@+id/fragment_container_alerts"
        >
 
     </FrameLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/out_of_service_text"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        android:id="@+id/fragment_container_out_of_service">
 
-    </LinearLayout>
+    </FrameLayout>
+
+
+
+
+</LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="2">
-    <FrameLayout
+        android:layout_weight="2"
+        android:paddingLeft="5dp">
+
+        <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fragment_container2"

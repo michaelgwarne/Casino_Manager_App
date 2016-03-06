@@ -10,17 +10,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MachineListFragment extends ListFragment {
+public class AlertListFragment extends ListFragment {
 
 
-    public MachineListFragment() {
+    public AlertListFragment() {
         // Required empty public constructor
     }
 
@@ -29,14 +28,11 @@ public class MachineListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        // Inflate the layout for this fragment
-            Bundle bun = getArguments();
-            String s = bun.getString("status");
             ArrayList<Machine> list = new ArrayList<>();
 
             for (Machine mc : Machine.machineList
                     ) {
-                if (mc.getMachineStatus().equalsIgnoreCase(s)) {
+                if (mc.getMachineStatus().equalsIgnoreCase("alerts")) {
                     list.add(mc);
                 }
             }
@@ -58,9 +54,10 @@ public class MachineListFragment extends ListFragment {
         bun.putString("type", mc.getMachineType());
         bun.putString("make", mc.getMachineMake());
         bun.putString("state", mc.getMachineStatus());
-        MachineDetailFragment machineDetailFragment = new MachineDetailFragment();
-        machineDetailFragment.setArguments(bun);
-        fragmentTransaction.replace(R.id.fragment_container2, machineDetailFragment);
+        PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
+        paperErrorFragment.setArguments(bun);
+        fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }
