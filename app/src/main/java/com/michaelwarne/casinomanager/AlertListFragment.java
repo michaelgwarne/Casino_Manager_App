@@ -5,7 +5,7 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.app.ListFragment;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,9 +54,9 @@ public class AlertListFragment extends ListFragment {
         bun.putString("type", mc.getMachineType());
         bun.putString("make", mc.getMachineMake());
         bun.putString("state", mc.getMachineStatus());
-        PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
-        paperErrorFragment.setArguments(bun);
-        fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
+        AlertInfoFragment alertInfoFragment = new AlertInfoFragment();
+        alertInfoFragment.setArguments(bun);
+        fragmentTransaction.replace(R.id.fragment_container2, alertInfoFragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }

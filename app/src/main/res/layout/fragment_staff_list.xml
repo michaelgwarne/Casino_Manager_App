@@ -24,7 +24,16 @@
             android:layout_height="wrap_content"
             android:text="New Text"
             android:id="@+id/last_name"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/staff_list_is_busy"
+            android:textSize="24sp"
+            android:padding="10dp" />
     </LinearLayout>
 
     <TextView

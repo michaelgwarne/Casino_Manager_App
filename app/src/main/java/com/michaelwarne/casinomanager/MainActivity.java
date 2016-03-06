@@ -27,11 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         String s;
 
-        for(int i = 101; i < 115; i ++){
-            s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Online","s", "m"));
-        }
-        for(int i = 115; i < 200; i ++){
+        for(int i = 115; i < 120; i ++){
             s = String.valueOf(i);
             Machine.machineList.add(new Machine(s ,"Alerts","s", "m"));
         }
@@ -40,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             Machine.machineList.add(new Machine(s ,"Out of Service","s", "m"));
         }
 
-        Staff.staffList.add(new Staff("Jessica", "Björnstad","Peon", false));
+        Staff.staffList.add(new Staff("Jessica", "Björnstad","Peon", true));
         Staff.staffList.add(new Staff("Poopy", "Poophead","Manager", false));
 
         FragmentManager fragmentManager = getFragmentManager();

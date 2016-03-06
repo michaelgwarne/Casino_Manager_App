@@ -24,6 +24,8 @@ public class PaperErrorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        // TODO: wire up buttons, add report button
+
         Bundle bun = getArguments();
         View view = inflater.inflate(R.layout.fragment_error_paper, container, false);
         mcId = (TextView)view.findViewById(R.id.machineId_paper_out);

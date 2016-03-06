@@ -1,6 +1,7 @@
 package com.michaelwarne.casinomanager;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,9 +26,17 @@ public class StaffAdapter extends ArrayAdapter<Staff> {
         TextView firstName = (TextView)convertView.findViewById(R.id.first_name);
         TextView lastName = (TextView)convertView.findViewById(R.id.last_name);
         TextView rank = (TextView)convertView.findViewById(R.id.rank);
+        TextView isBusy = (TextView)convertView.findViewById(R.id.staff_list_is_busy);
         firstName.setText(staff.getFirstName());
         lastName.setText(staff.getLastName());
         rank.setText(staff.getRank());
+        if(staff.isBusy()){
+            isBusy.setText("Busy");
+            isBusy.setBackgroundColor(Color.RED);
+        }else{
+            isBusy.setText("Available");
+            isBusy.setBackgroundColor(Color.GREEN);
+        }
         return convertView;
     }
 }
