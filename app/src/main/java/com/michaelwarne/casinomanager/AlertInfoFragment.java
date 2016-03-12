@@ -35,6 +35,13 @@ public class AlertInfoFragment extends Fragment {
         final Bundle bun = getArguments();
         name = bun.getString("name");
         mcId.setText(name);
+        for (Machine mc: Machine.machineList
+             ) {
+            if(mc.getMachineId().equalsIgnoreCase(name)){
+                mcError.setText(mc.getAlertType());
+                break;
+            }
+        }
         takeButton = (Button)view.findViewById(R.id.alert_info_button);
         takeButton.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -43,9 +50,12 @@ public class AlertInfoFragment extends Fragment {
                 bundle.putString("name", name);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
-                paperErrorFragment.setArguments(bundle);
-                fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
+            //    PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
+            //    paperErrorFragment.setArguments(bundle);
+            //    fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
+                JackpotAlertFragment jackpotAlertFragment = new JackpotAlertFragment();
+                jackpotAlertFragment.setArguments(bundle);
+                fragmentTransaction.replace(R.id.fragment_container2, jackpotAlertFragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

@@ -29,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
 
         for(int i = 115; i < 120; i ++){
             s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Alerts","s", "m"));
+            Machine.machineList.add(new Machine(s ,"Alerts","s", "m", "Paper out"));
         }
         for(int i = 130; i < 145; i ++){
             s = String.valueOf(i);
-            Machine.machineList.add(new Machine(s ,"Out of Service","s", "m"));
+            Machine.machineList.add(new Machine(s ,"Out of Service","s", "m", "Unknown"));
         }
 
-        Staff.staffList.add(new Staff("Jessica", "Björnstad","Peon", true));
+        Staff.staffList.add(new Staff("Pooptra", "Tahiraj","Noob", true));
         Staff.staffList.add(new Staff("Poopy", "Poophead","Manager", false));
 
         FragmentManager fragmentManager = getFragmentManager();

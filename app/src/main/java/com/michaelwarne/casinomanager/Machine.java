@@ -12,13 +12,23 @@ public class Machine {
     private String machineStatus;
     private String machineType;
     private String machineMake;
+    private String alertType;
     public static ArrayList<Machine> machineList = new ArrayList<>();
 
-    public Machine(String id, String status, String type, String make){
+    public Machine(String id, String status, String type, String make, String alertType){
         this.machineId = id;
         this.machineStatus = status;
         this.machineType = type;
         this.machineMake = make;
+        this.alertType = alertType;
+    }
+
+    public String getAlertType() {
+        return alertType;
+    }
+
+    public void setAlertType(String alertType) {
+        this.alertType = alertType;
     }
 
     public String getMachineMake() {
