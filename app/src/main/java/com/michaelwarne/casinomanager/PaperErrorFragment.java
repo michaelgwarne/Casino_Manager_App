@@ -179,6 +179,8 @@ public class PaperErrorFragment extends Fragment {
         FragmentManager fragManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
         AlertListFragment machineListFragment = new AlertListFragment();
+        MachineNumbersFragment machineNumbersFragment = new MachineNumbersFragment();
+        fragmentTransaction.replace(R.id.machine_numbers_container, machineNumbersFragment);
         fragmentTransaction.replace(R.id.fragment_container_alerts, machineListFragment);
         fragmentTransaction.commit();
 

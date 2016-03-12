@@ -38,7 +38,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingTop="20dp"
-        android:paddingBottom="10dp"
+        android:paddingBottom="20dp"
         android:textSize="28sp"
+        android:id="@+id/alert_manager"
         android:text="Alert Manager"/>
 </LinearLayout>

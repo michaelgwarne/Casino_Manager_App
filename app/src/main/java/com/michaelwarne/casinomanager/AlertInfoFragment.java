@@ -50,12 +50,16 @@ public class AlertInfoFragment extends Fragment {
                 bundle.putString("name", name);
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            //    PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
-            //    paperErrorFragment.setArguments(bundle);
-            //    fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
-                JackpotAlertFragment jackpotAlertFragment = new JackpotAlertFragment();
-                jackpotAlertFragment.setArguments(bundle);
-                fragmentTransaction.replace(R.id.fragment_container2, jackpotAlertFragment);
+                if(bun.get("alert").equals("Out of paper")) {
+                        PaperErrorFragment paperErrorFragment = new PaperErrorFragment();
+                        paperErrorFragment.setArguments(bundle);
+                        fragmentTransaction.replace(R.id.fragment_container2, paperErrorFragment);
+                }else{
+                    JackpotAlertFragment jackpotAlertFragment = new JackpotAlertFragment();
+                    jackpotAlertFragment.setArguments(bundle);
+                    fragmentTransaction.replace(R.id.fragment_container2, jackpotAlertFragment);
+                }
+
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }

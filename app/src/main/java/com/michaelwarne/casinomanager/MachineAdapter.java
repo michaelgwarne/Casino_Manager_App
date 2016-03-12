@@ -24,7 +24,7 @@ public class MachineAdapter extends ArrayAdapter<Machine> {
         TextView t1 = (TextView)convertView.findViewById(R.id.machine_id);
         TextView t2 = (TextView)convertView.findViewById(R.id.machine_status);
         t1.setText(machine.getMachineId());
-        t2.setText(machine.getMachineStatus());
+        t2.setText(machine.getAlertType());
 
         return convertView;
     }

@@ -12,7 +12,7 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainDetailFragment extends Fragment {
+public class MachineNumbersFragment extends Fragment {
 
 
 
@@ -24,7 +24,7 @@ public class MainDetailFragment extends Fragment {
     private Integer noOfAlerts = 0;
     private Integer noOfOos = 0;
 
-    public MainDetailFragment() {
+    public MachineNumbersFragment() {
         // Required empty public constructor
     }
 
@@ -32,7 +32,7 @@ public class MainDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_main_detail, container, false);
+        View v = inflater.inflate(R.layout.fragment_machine_numbers, container, false);
         // Inflate the layout for this fragment
         online = (TextView) v.findViewById(R.id.online_text);
         alerts = (TextView)v.findViewById(R.id.alerts_text);

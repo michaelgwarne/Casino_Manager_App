@@ -32,10 +32,10 @@ public class StaffAdapter extends ArrayAdapter<Staff> {
         rank.setText(staff.getRank());
         if(staff.isBusy()){
             isBusy.setText("Busy");
-            isBusy.setBackgroundColor(Color.RED);
+         //   isBusy.setBackgroundColor(Color.RED);
         }else{
             isBusy.setText("Available");
-            isBusy.setBackgroundColor(Color.GREEN);
+        //    isBusy.setBackgroundColor(Color.GREEN);
         }
         return convertView;
     }

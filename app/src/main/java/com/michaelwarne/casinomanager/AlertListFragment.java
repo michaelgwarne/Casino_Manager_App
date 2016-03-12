@@ -54,6 +54,7 @@ public class AlertListFragment extends ListFragment {
         bun.putString("type", mc.getMachineType());
         bun.putString("make", mc.getMachineMake());
         bun.putString("state", mc.getMachineStatus());
+        bun.putString("alert", mc.getAlertType());
         AlertInfoFragment alertInfoFragment = new AlertInfoFragment();
         alertInfoFragment.setArguments(bun);
         fragmentTransaction.replace(R.id.fragment_container2, alertInfoFragment);
