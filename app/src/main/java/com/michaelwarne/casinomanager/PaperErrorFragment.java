@@ -17,25 +17,26 @@ import android.widget.Toast;
  * A simple {@link Fragment} subclass.
  */
 public class PaperErrorFragment extends Fragment {
-    TextView refillPaper;
-    Button refillYes;
-    Button refillNo;
-    Button refillQuestion;
-    TextView checkPaper;
-    Button checkYes;
-    Button checkNo;
-    Button checkQuestion;
-    TextView resetPrinter;
-    Button resetYes;
-    Button resetNo;
-    Button resetQuestion;
-    TextView restartMachine;
-    Button restartYes;
-    Button restartNo;
-    Button restartQuestion;
+    private TextView refillPaper;
+    private Button refillYes;
+    private Button refillNo;
+    private Button refillQuestion;
+    private TextView checkPaper;
+    private Button checkYes;
+    private Button checkNo;
+    private Button checkQuestion;
+    private TextView resetPrinter;
+    private Button resetYes;
+    private Button resetNo;
+    private Button resetQuestion;
+    private TextView restartMachine;
+    private Button restartYes;
+    private Button restartNo;
+    private Button restartQuestion;
     Button report;
-    TextView mcId;
-    Bundle bun;
+    private TextView mcId;
+    private Bundle bun;
+    private Bundle bunAway;
 
     public PaperErrorFragment() {
         // Required empty public constructor
@@ -45,7 +46,7 @@ public class PaperErrorFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // TODO: onClick code
+
         View view = inflater.inflate(R.layout.fragment_error_paper, container, false);
         refillPaper = (TextView)view.findViewById(R.id.refill_paper);
         refillYes = (Button)view.findViewById(R.id.refill_paper_yes);
@@ -89,6 +90,7 @@ public class PaperErrorFragment extends Fragment {
         refillQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showHelp(1);
 
             }
         });
@@ -114,7 +116,7 @@ public class PaperErrorFragment extends Fragment {
         checkQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                showHelp(1);
             }
         });
 
@@ -137,6 +139,7 @@ public class PaperErrorFragment extends Fragment {
         resetQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showHelp(2);
 
             }
         });
@@ -161,10 +164,23 @@ public class PaperErrorFragment extends Fragment {
         restartQuestion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                showHelp(3);
 
             }
         });
         return view;
+    }
+
+    public void showHelp(int question){
+        FragmentManager fragManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
+        bunAway = new Bundle();
+        bunAway.putInt("fixName", question);
+        HowToFixFragment howToFixFragment = new HowToFixFragment();
+        howToFixFragment.setArguments(bunAway);
+        fragmentTransaction.replace(R.id.fragment_container2, howToFixFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     public void saveReport(View v){
@@ -180,6 +196,8 @@ public class PaperErrorFragment extends Fragment {
         FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
         AlertListFragment machineListFragment = new AlertListFragment();
         MachineNumbersFragment machineNumbersFragment = new MachineNumbersFragment();
+        StaffListFragment staffListFragment = new StaffListFragment();
+        fragmentTransaction.replace(R.id.fragment_container2, staffListFragment);
         fragmentTransaction.replace(R.id.machine_numbers_container, machineNumbersFragment);
         fragmentTransaction.replace(R.id.fragment_container_alerts, machineListFragment);
         fragmentTransaction.commit();

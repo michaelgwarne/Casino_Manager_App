@@ -23,6 +23,9 @@
     <string name="alert_take">Take</string>
     <string name="report_saved">Report Saved</string>
     <string name="manager_alerted">Manager Alerted</string>
+    <string name="check_paper_fix">Paper should be inserted with the black marks first. Turn the audit key.</string>
+    <string name="reset_printer_fix">Open main door, enter service menu, Devices -> Printer check \'OFF\' option, exit menu. Enter service menu, Devices -> Printer check "ON" option. Turn the audit key</string>
+    <string name="restart_machine_fix">Open main door, turn the machine off with the ON/OFF switch. Turn it back on. Turn audit key.</string>
     <string-array name="status">
         <item>Online</item>
         <item>Out of Service</item>

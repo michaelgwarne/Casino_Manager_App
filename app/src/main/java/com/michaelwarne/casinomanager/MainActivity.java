@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setupMachines();
 
-
-        Staff.staffList.add(new Staff("Demo", "Name1","Floor Staff", true));
-        Staff.staffList.add(new Staff("DemoManager", "Name2","Floor Manager", false));
+        Staff.staffList.add(new Staff("Dave", "Davidsson", "Floor Staff", false));
+        Staff.staffList.add(new Staff("Bob", "Bobsson","Floor Staff", true));
+        Staff.staffList.add(new Staff("Sven", "Svensson","Floor Manager", false));
 
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
