@@ -3,69 +3,67 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MachineNumbersFragment"
-    android:orientation="vertical">
+    android:orientation="horizontal"
+    android:paddingBottom="20dp">
 
 
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/online"
-            android:id="@+id/online"
-            android:layout_marginStart="1dp"
-            android:textSize="20sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/online_text"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/online"
+        android:id="@+id/online"
+        android:layout_marginStart="1dp"
+        android:textSize="20sp" />
 
-            android:layout_marginStart="15dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/online_text"
 
-            android:textSize="20sp" />
+        android:layout_marginStart="15dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/alerts"
-            android:id="@+id/alerts"
+        android:textSize="20sp" />
 
-            android:layout_marginStart="15dp"
-            android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alerts"
+        android:id="@+id/alerts"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/alerts_text"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp" />
 
-            android:layout_marginStart="15dp"
-            android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/alerts_text"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/out_of_service"
-            android:id="@+id/oos"
+        android:layout_marginStart="15dp"
+        android:textSize="20sp" />
 
-            android:layout_marginStart="15dp"
-            android:textIsSelectable="false"
-            android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/out_of_service"
+        android:id="@+id/oos"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/oos_text"
+        android:layout_marginStart="15dp"
+        android:textIsSelectable="false"
+        android:textSize="20sp" />
 
-            android:layout_marginStart="15dp"
-            android:textSize="20sp" />
-    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/oos_text"
 
+        android:layout_marginStart="15dp"
+        android:textSize="20sp" />
 </LinearLayout>
+
+

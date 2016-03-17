@@ -22,12 +22,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setupMachines();
+        if(savedInstanceState == null) {
+            setupMachines();
 
-        Staff.staffList.add(new Staff("Dave", "Davidsson", "Floor Staff", false));
-        Staff.staffList.add(new Staff("Bob", "Bobsson","Floor Staff", true));
-        Staff.staffList.add(new Staff("Sven", "Svensson","Floor Manager", false));
-
+            Staff.staffList.add(new Staff("Dave", "Davidsson", "Floor Staff", false));
+            Staff.staffList.add(new Staff("Bob", "Bobsson", "Floor Staff", true));
+            Staff.staffList.add(new Staff("Sven", "Svensson", "Floor Manager", false));
+        }
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         AlertListFragment machineListFragment = new AlertListFragment();
