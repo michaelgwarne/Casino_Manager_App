@@ -60,7 +60,7 @@ public class AlertInfoFragment extends Fragment {
                     fragmentTransaction.replace(R.id.fragment_container2, jackpotAlertFragment);
                 }
 
-         //       fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
             }
         });

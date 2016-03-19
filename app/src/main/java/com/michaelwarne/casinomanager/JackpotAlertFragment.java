@@ -38,7 +38,7 @@ public class JackpotAlertFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(v.getContext(), R.string.manager_alerted, Toast.LENGTH_SHORT);
+                Toast toast = Toast.makeText(v.getContext(), R.string.manager_alerted, Toast.LENGTH_LONG);
                 toast.show();
 
                 for (Machine mc: Machine.machineList
@@ -52,6 +52,8 @@ public class JackpotAlertFragment extends Fragment {
                 FragmentManager fragManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragManager.beginTransaction();
                 AlertListFragment machineListFragment = new AlertListFragment();
+                StaffListFragment staffListFragment = new StaffListFragment();
+                fragmentTransaction.replace(R.id.fragment_container2, staffListFragment);
                 MachineNumbersFragment machineNumbersFragment = new MachineNumbersFragment();
                 fragmentTransaction.replace(R.id.machine_numbers_container, machineNumbersFragment);
                 fragmentTransaction.replace(R.id.fragment_container_alerts, machineListFragment);
